@@ -1,24 +1,26 @@
-NAME := #
+name := #
+
+rustlings := sudo /home/lfanke/rcore/rustlings/target/debug/rustlings
 
 all: watch
 
 watch:
-	@rustlings watch
+	@${rustlings} watch
 
 help:
-	@rustlings hint ${NAME}
+	@${rustlings} hint ${NAME}
 
 run:
-	@rustlings run ${NAME}
+	@${rustlings} run ${NAME}
 
 list:
-	@rustlings list
+	@${rustlings} list
 
 next:
-	@rustlings run next
+	@${rustlings} run next
 
 verify:
-	@rustlings verify
+	@${rustlings} verify
 
 init:
 	@sudo cargo install --force --path .
@@ -29,6 +31,6 @@ commit:
 	@git push
 
 code:
-	@code .
+	@sudo code .
 
 .PHONY: all watch help run list next verify init commit code

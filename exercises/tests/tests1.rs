@@ -10,12 +10,23 @@
 // Execute `rustlings hint tests1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 #[cfg(test)]
 mod tests {
     #[test]
+    #[should_panic]
     fn you_can_assert() {
-        assert!();
+        assert!(false);
     }
+
+    #[test]
+    fn this_func_will_pass() {
+        assert!(true);
+    }
+
+    /// doc test
+    /// ```rust
+    /// asserteq!(233, 0xe9)
+    /// ```
+    fn doc_test() {}
 }
